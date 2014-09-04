@@ -275,9 +275,9 @@ public OnPluginStart()
 	PointsIAmmoPack = CreateConVar("l4d2_points_incendiary_ammo_pack", "95", "How many points the incendiary ammo pack costs", FCVAR_PLUGIN);
 	PointsLSight = CreateConVar("l4d2_points_laser", "2", "How many points the laser sight costs", FCVAR_PLUGIN);
 	PointsHeal = CreateConVar("l4d2_points_survivor_heal", "100", "How many points a complete heal costs", FCVAR_PLUGIN);
-	PointsRefill = CreateConVar("l4d2_points_refill", "15", "How many points an ammo refill costs", FCVAR_PLUGIN);
-	SValueKillingSpree = CreateConVar("l4d2_points_cikill_value", "2", "How many points does killing a certain amount of infected earn", FCVAR_PLUGIN);
-	SNumberKill = CreateConVar("l4d2_points_cikills", "25", "How many kills you need to earn a killing spree bounty", FCVAR_PLUGIN);
+	PointsRefill = CreateConVar("l4d2_points_refill", "10", "How many points an ammo refill costs", FCVAR_PLUGIN);
+	SValueKillingSpree = CreateConVar("l4d2_points_cikill_value", "3", "How many points does killing a certain amount of infected earn", FCVAR_PLUGIN);
+	SNumberKill = CreateConVar("l4d2_points_cikills", "20", "How many kills you need to earn a killing spree bounty", FCVAR_PLUGIN);
 	SValueHeadSpree = CreateConVar("l4d2_points_headshots_value", "4", "How many points does killing a certain amount of infected with headshots earn", FCVAR_PLUGIN);
 	SNumberHead = CreateConVar("l4d2_points_headshots", "15", "How many kills you need to earn a head hunter bonus", FCVAR_PLUGIN);
 	SSIKill = CreateConVar("l4d2_points_sikill", "1", "How many points does killing a special infected earn", FCVAR_PLUGIN);
