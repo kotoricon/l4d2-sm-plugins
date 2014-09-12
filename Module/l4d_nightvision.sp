@@ -133,7 +133,7 @@ SwitchNightVision(client)
 	SQL_TQuery(db, GetClientPoints, query, client);
 	
 	new d=GetEntProp(client, Prop_Send, "m_bNightVisionOn");
-	if(ClientPoints[client] >= 500)
+	if(ClientPoints[client] >= 2500)
 	{
 		if(d==0 )
 		{

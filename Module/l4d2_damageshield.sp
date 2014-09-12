@@ -26,6 +26,9 @@ public Action:OnTakeDamage(victim, &attacker, &inflictor, &Float:damage, &damage
 	if(!IsValidClient(attacker) || victim == attacker) return Plugin_Continue; 
 	new AdminId:id = GetUserAdmin(victim);
 	
+	new Float:damage1 = damage * 10.0;
+	new Float:damage2 = damage * 20.0;
+	
 	//special anti-damage addons 100% admins and 20% for normal player
 	if(GetClientTeam(victim) != GetClientTeam(attacker) && GetClientTeam(attacker) == 3 && GetClientTeam(victim) == 2) 
 	{
@@ -39,10 +42,17 @@ public Action:OnTakeDamage(victim, &attacker, &inflictor, &Float:damage, &damage
 				return Plugin_Changed;
 			}
 		}
+		if(IsFakeClient(victim)))
+		{
+			if(GetRandomInt(0,1)==1)
+			{
+				SDKHooks_TakeDamage(attacker, 0, 0, damage1, damagetype);
+				damage = 0.0;
+				return Plugin_Changed;
+			}
+		}
 		else
 		{
-			new Float:damage1 = damage * 10.0;
-			new Float:damage2 = damage * 20.0;
 			//PrintToChat(victim, "反伤系统成功启用, 感染者被反弹 %.1f 伤害", damage1);
 			if(GetEntProp(attacker, Prop_Send, "m_zombieClass") != 8)
 			{
