@@ -452,8 +452,7 @@ stock SetPlayerAccount(client)
 	if (IsFakeClient(client)) {
 		return;
 	}
-	
-	decl String:SteamID[30];
+
 	GetClientAuthString(client, SteamID, sizeof(SteamID));
 	
 	decl String:query[105];
