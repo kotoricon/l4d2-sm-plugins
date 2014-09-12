@@ -434,6 +434,33 @@ public bool:FilterSurvivors(const String:pattern[], Handle:clients)
 	return true;
 }
 
+public OnClientPostAdminCheck(client)
+{	
+	SetPlayerAccount(client);
+}
+
+stock SetPlayerAccount(client)
+{
+	if (StatsDisabled()) {
+		return;
+	}
+	
+	if (!client || !IsClientInGame(client)) {
+		return;
+	}
+
+	if (IsFakeClient(client)) {
+		return;
+	}
+	
+	decl String:SteamID[30];
+	GetClientAuthString(client, SteamID, sizeof(SteamID));
+	
+	decl String:query[105];
+	Format(query, sizeof(query), "SELECT money FROM stats WHERE steamid = '%s'", SteamID); 
+	SQL_TQuery(db, GetClientPoints, query, client);
+}
+
 public ShopAd()
 {
 	CreateTimer(500.0, Stats, _, TIMER_REPEAT);
