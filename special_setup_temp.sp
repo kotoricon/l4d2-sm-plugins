@@ -131,7 +131,7 @@ public Action:tmrHealth(Handle:timer, any:userid)
 	{
 		if(client && IsClientInGame(client) && GetClientHealth(client) > g_iCvarHealth)
 		{
-			SetEntityHealth(client, (0*g_iCvarHealth + extra * 5));
+			SetEntityHealth(client, (0*g_iCvarHealth + extra * 3 + 4000));
 			ServerCommand("sm_cvar tank_burn_duration %d", (extime + 100));
 		}
 	}
@@ -139,24 +139,24 @@ public Action:tmrHealth(Handle:timer, any:userid)
 	{
 		if(client && IsClientInGame(client) && GetClientHealth(client) > g_iCvarHealth)
 		{
-			SetEntityHealth(client, (0*g_iCvarHealth + extra * 4));
-			ServerCommand("sm_cvar tank_burn_duration %d", (extime + 150));
+			SetEntityHealth(client, (0*g_iCvarHealth + extra * 2 + 5000));
+			ServerCommand("sm_cvar tank_burn_duration %d", (extime + 125));
 		}
 	}
 	if(StrEqual(CurrentDifficulty, "Hard", false))
 	{
 		if(client && IsClientInGame(client) && GetClientHealth(client) > g_iCvarHealth)
 		{
-			SetEntityHealth(client, (0*g_iCvarHealth + extra * 3));
-			ServerCommand("sm_cvar tank_burn_duration_hard %d", (extime + 180));
+			SetEntityHealth(client, (0*g_iCvarHealth + extra + 6000));
+			ServerCommand("sm_cvar tank_burn_duration_hard %d", (extime + 150));
 		}
 	}
 	if(StrEqual(CurrentDifficulty, "Impossible", false))
 	{
 		if(client && IsClientInGame(client) && GetClientHealth(client) > g_iCvarHealth)
 		{
-			SetEntityHealth(client, (0*g_iCvarHealth + extra * 2));
-			ServerCommand("sm_cvar tank_burn_duration_hard %d", (extime + 210));
+			SetEntityHealth(client, (0*g_iCvarHealth + extra + 5000));
+			ServerCommand("sm_cvar tank_burn_duration_expert %d", (extime + 150));
 		}
 	}
 }

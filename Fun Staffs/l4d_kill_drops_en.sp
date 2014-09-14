@@ -121,7 +121,7 @@ public OnPluginStart()
 	l4d_loot_jockey = CreateConVar("l4d_loot_jockey", "10.0", "loot of jockey %[0-100]", FCVAR_PLUGIN);
 	l4d_loot_charger = CreateConVar("l4d_loot_charger", "10.0", "loot of charger %[0-100]", FCVAR_PLUGIN);
 	l4d_loot_tank = CreateConVar("l4d_loot_tank", "70", "loot of tank %[0-100]", FCVAR_PLUGIN);
-	l4d_loot_witch = CreateConVar("l4d_loot_witch", "100", "loot of witch %[0-100]", FCVAR_PLUGIN);
+	l4d_loot_witch = CreateConVar("l4d_loot_witch", "50", "loot of witch %[0-100]", FCVAR_PLUGIN);
 
 	l4d_loot_hunter_num = CreateConVar("l4d_loot_hunter_num", "1", "loot count of hunter ", FCVAR_PLUGIN);
 	l4d_loot_smoker_num = CreateConVar("l4d_loot_smoker_num", "1", "loot count of smoker ", FCVAR_PLUGIN);
@@ -141,9 +141,9 @@ public OnPluginStart()
   	l4d_kill_addhp_tank = CreateConVar("l4d_kill_addhp_tank", "1", "health recover for kill tank", FCVAR_PLUGIN);
 	l4d_kill_addhp_witch = CreateConVar("l4d_kill_addhp_witch", "1", "health recover for kill witch", FCVAR_PLUGIN);
  
-	l4d_loot_weapon = CreateConVar("l4d_loot_weapon", "5.0", "probability of loot guns %", FCVAR_PLUGIN);
-	l4d_loot_weapon_melee = CreateConVar("l4d_loot_weapon_melee", "5.0", "probability of loot melee weapon %", FCVAR_PLUGIN);
-	l4d_loot_health = CreateConVar("l4d_loot_health", "90.0", "probability of loot Medical supplies %", FCVAR_PLUGIN);
+	l4d_loot_weapon = CreateConVar("l4d_loot_weapon", "15.0", "probability of loot guns %", FCVAR_PLUGIN);
+	l4d_loot_weapon_melee = CreateConVar("l4d_loot_weapon_melee", "15.0", "probability of loot melee weapon %", FCVAR_PLUGIN);
+	l4d_loot_health = CreateConVar("l4d_loot_health", "70.0", "probability of loot Medical supplies %", FCVAR_PLUGIN);
 	l4d_loot_item = CreateConVar("l4d_loot_item", "0.0", "probability of loot items %", FCVAR_PLUGIN);
 
 	l4d_kill_addhp_enabled = CreateConVar("l4d_kill_addhp_enabled", "0", "0: disable health recover, 1:eanble", FCVAR_PLUGIN);
